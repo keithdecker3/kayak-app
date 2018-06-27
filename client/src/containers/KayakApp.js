@@ -11,7 +11,7 @@ class KayakApp extends Component {
   render() {
     return (
       <div>
-        <RiverCategories />
+        <RiverCategories riverImages={this.props.riverImages} />
       </div>
     )
   }
