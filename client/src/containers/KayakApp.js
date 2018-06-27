@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { actions } from '../store'
 
 import RiverCategories from '../components/RiverCategories'
+import RiverRuns from '../components/RiverRuns'
 
 class KayakApp extends Component {
 
@@ -12,6 +13,7 @@ class KayakApp extends Component {
     return (
       <div>
         <RiverCategories riverImages={this.props.riverImages} />
+        <RiverRuns />
       </div>
     )
   }
@@ -19,7 +21,9 @@ class KayakApp extends Component {
 
 function mapStateToProps(state) {
   return {
-    riverImages: state.riverImages
+    riverImages: state.riverImages,
+    currentRiver: state.currentRiver,
+    riverRuns: state.riverRuns
   }
 }
 

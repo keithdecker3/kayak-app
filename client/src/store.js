@@ -27,7 +27,9 @@ const initialState = {
       river: 'Blue River'
     }
   ],
-  input: ''
+  input: '',
+  currentRiver: 'Poudre',
+  riverRuns: []
 }
 
 export const actions = {
