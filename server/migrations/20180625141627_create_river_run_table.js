@@ -7,8 +7,8 @@ exports.up = function(knex, Promise) {
     table.string('start_time'),
     table.string('end_time'),
     table.string('description'),
-    table.string('start'),
-    table.string('end'),
+    table.string('start_point'),
+    table.string('end_point'),
     table.integer('difficulty')
   })
 };

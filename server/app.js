@@ -8,14 +8,16 @@ const cors = require('cors');
 
 var app = express();
 
+const runs = require('./api/riverRun')
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(cors())
 
-
+app.use('/runs', runs)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
