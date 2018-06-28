@@ -7,8 +7,8 @@ exports.up = function(knex, Promise) {
     table.string('start_time'),
     table.string('end_time'),
     table.string('description'),
-    table.decimal('meet_lat'),
-    table.decimal('meet_lng'),
+    table.string('meet_lat'),
+    table.string('meet_lng'),
     table.integer('difficulty')
   })
 };

@@ -11,8 +11,8 @@ exports.seed = function(knex, Promise) {
           start_time: '9:00AM',
           end_time: '2:00PM',
           description: 'chill trip brah, gonna be great',
-          meet_lat: 39.758488,
-          meet_lng: -105.218509,
+          meet_lat: '39.758488',
+          meet_lng: '-105.218509',
           difficulty: 3
         },
         {
@@ -21,8 +21,8 @@ exports.seed = function(knex, Promise) {
           start_time: '9:00AM',
           end_time: '2:00PM',
           description: 'chill trip brah, gonna be great',
-          meet_lat: 39.758488,
-          meet_lng: -105.218509,
+          meet_lat: '39.758488',
+          meet_lng: '-105.218509',
           difficulty: 3
         },
         {
@@ -31,8 +31,8 @@ exports.seed = function(knex, Promise) {
           start_time: '9:00AM',
           end_time: '2:00PM',
           description: 'chill trip brah, gonna be great',
-          meet_lat: 39.758488,
-          meet_lng: -105.218509,
+          meet_lat: '39.758488',
+          meet_lng: '-105.218509',
           difficulty: 3
         }
       ]);

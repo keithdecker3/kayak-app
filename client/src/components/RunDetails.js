@@ -5,7 +5,7 @@ import { Card, Image, Button } from 'semantic-ui-react'
 
 class RunDetails extends Component {
   render() {
-    const position = [39.758488, -105.218509]
+    const position = [this.props.selectedRun.meet_lat, this.props.selectedRun.meet_lng]
     return (
       <div>
         <Map center={position} zoom={17}>
