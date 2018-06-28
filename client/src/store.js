@@ -1,4 +1,7 @@
+import API from './API'
+
 const HANDLE_CHANGE = 'HANDLE_CHANGE'
+const RIVER_SELECTED = 'RIVER_SELECTED'
 
 const initialState = {
   riverImages: [
@@ -28,8 +31,10 @@ const initialState = {
     }
   ],
   input: '',
-  currentRiver: 'Poudre',
-  riverRuns: []
+  riverRuns: [],
+  showRivers: true,
+  showRuns: false
+
 }
 
 export const actions = {
@@ -37,6 +42,12 @@ export const actions = {
     return {
       type: HANDLE_CHANGE,
       input
+    }
+  },
+  getRiverRuns(currentRiver) {
+    return {
+      type: 'RIVER_RUNS',
+      payload: API.search(currentRiver)
     }
   }
 }
@@ -47,6 +58,14 @@ export function reducer(state = initialState, action) {
       return {
         ...state,
         input: action.input
+      }
+    }
+    case 'RIVER_RUNS_FULFILLED': {
+      return {
+        ...state,
+        riverRuns: action.payload,
+        showRivers: false,
+        showRuns: true
       }
     }
     default:

@@ -8,12 +8,18 @@ import RiverRuns from '../components/RiverRuns'
 
 class KayakApp extends Component {
 
-
   render() {
     return (
       <div>
-        <RiverCategories riverImages={this.props.riverImages} />
-        <RiverRuns />
+        {this.props.showRivers ? 
+        <RiverCategories 
+          onGetRiverRuns={this.props.onGetRiverRuns}
+          riverImages={this.props.riverImages} />
+          : '' }
+        {this.props.showRuns ?
+        <RiverRuns 
+          riverRuns={this.props.riverRuns} />
+          : '' }
       </div>
     )
   }
@@ -22,16 +28,20 @@ class KayakApp extends Component {
 function mapStateToProps(state) {
   return {
     riverImages: state.riverImages,
-    currentRiver: state.currentRiver,
-    riverRuns: state.riverRuns
+    riverRuns: state.riverRuns,
+    showRivers: state.showRivers,
+    showRuns: state.showRuns
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    handleChange(input) {
+    onHandleChange(input) {
       dispatch(actions.handleChange(input))
-    }
+    },
+    onGetRiverRuns(currentRiver) {
+      dispatch(actions.getRiverRuns(currentRiver))
+    },
   }
 }
 
