@@ -1,7 +1,6 @@
 import API from './API'
 
 const HANDLE_CHANGE = 'HANDLE_CHANGE'
-const RIVER_SELECTED = 'RIVER_SELECTED'
 
 const initialState = {
   riverImages: [

@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 import { actions } from '../store'
 
 import RiverCategories from '../components/RiverCategories'
 import RiverRuns from '../components/RiverRuns'
+
+// var config = {
+//   apiKey: "AIzaSyDRmeOoIkVwFF2OveGuF6-OZb-qbkkoVwM",
+//   authDomain: "kayak-app.firebaseapp.com",
+//   databaseURL: "https://kayak-app.firebaseio.com",
+//   projectId: "kayak-app",
+//   storageBucket: "kayak-app.appspot.com",
+//   messagingSenderId: "989994694489" 
+// }
 
 class KayakApp extends Component {
 
