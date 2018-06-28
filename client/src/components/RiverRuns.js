@@ -2,14 +2,11 @@ import React, { Component } from 'react'
 import { Card, Icon, Button } from 'semantic-ui-react'
 
 class RiverRuns extends Component {
-  // componentDidMount() {
-  //   this.props.onGetRiverRuns(this.props.currentRiver)
-  // }
 
   render() {
     return (
       <div>
-        {this.props.riverRuns.map(run => {
+        {this.props.riverRuns.map((run, index) => {
           return (
             <Card key={run.id}>
             <Card.Content>
@@ -28,7 +25,7 @@ class RiverRuns extends Component {
                 22 Attending
               </a>
             </Card.Content>
-            <Button>View Details</Button>
+            <Button name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>View Details</Button>
           </Card>
           )
         })}

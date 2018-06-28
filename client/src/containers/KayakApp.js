@@ -27,9 +27,15 @@ class KayakApp extends Component {
           : '' }
         {this.props.showRuns ?
         <RiverRuns 
-          riverRuns={this.props.riverRuns} />
+          riverRuns={this.props.riverRuns} 
+          selectedRun={this.props.selectedRun} 
+          onSelectRun={this.props.onSelectRun} />
           : '' }
-        <RunDetails/>
+        {this.props.showRunDetails ?
+        <RunDetails
+          selectedRun={this.props.selectedRun} 
+          onSelectRun={this.props.onSelectRun} />
+          : '' }
       </div>
     )
   }
@@ -39,8 +45,10 @@ function mapStateToProps(state) {
   return {
     riverImages: state.riverImages,
     riverRuns: state.riverRuns,
+    selectedRun: state.selectedRun,
     showRivers: state.showRivers,
-    showRuns: state.showRuns
+    showRuns: state.showRuns,
+    showRunDetails: state.showRunDetails
   }
 }
 
@@ -52,6 +60,9 @@ function mapDispatchToProps(dispatch) {
     onGetRiverRuns(currentRiver) {
       dispatch(actions.getRiverRuns(currentRiver))
     },
+    onSelectRun(selectedRun) {
+      dispatch(actions.selectRun(selectedRun))
+    }
   }
 }
 
