@@ -5,6 +5,7 @@ import { actions } from '../store'
 import RiverCategories from '../components/RiverCategories'
 import RiverRuns from '../components/RiverRuns'
 import RunDetails from '../components/RunDetails'
+import AppHeader from '../components/AppHeader'
 
 // var config = {
 //   apiKey: "AIzaSyDRmeOoIkVwFF2OveGuF6-OZb-qbkkoVwM",
@@ -20,6 +21,7 @@ class KayakApp extends Component {
   render() {
     return (
       <div>
+        <AppHeader />
         {this.props.showRivers ? 
         <RiverCategories 
           onGetRiverRuns={this.props.onGetRiverRuns}
