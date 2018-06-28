@@ -4,6 +4,7 @@ import { actions } from '../store'
 
 import RiverCategories from '../components/RiverCategories'
 import RiverRuns from '../components/RiverRuns'
+import RunDetails from '../components/RunDetails'
 
 // var config = {
 //   apiKey: "AIzaSyDRmeOoIkVwFF2OveGuF6-OZb-qbkkoVwM",
@@ -28,6 +29,7 @@ class KayakApp extends Component {
         <RiverRuns 
           riverRuns={this.props.riverRuns} />
           : '' }
+        <RunDetails/>
       </div>
     )
   }

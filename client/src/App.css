@@ -22,3 +22,8 @@
   margin-right: 1.5px;
 }
 
+.leaflet-container {
+  height: 400px;
+  width: 400px;
+}
+
