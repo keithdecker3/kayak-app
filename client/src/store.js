@@ -6,28 +6,34 @@ const SELECT_RUN = 'SELECT_RUN'
 const initialState = {
   riverImages: [
     {
+      text: 'Poudre',
+      value: 'Poudre',
       image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
-      river: 'Poudre'
     },
     {
+      text: 'Colorado',
+      value: 'Colorado',
       image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
-      river: 'Colorado'
     },
     {
+      text: 'Animas',
+      value: 'Animas',
       image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
-      river: 'Animas'
     },
     {
+      text: 'Arkansas',
+      value: 'Arkansas',
       image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
-      river: 'Arkansas'
     },
     {
+      text: 'Clear Creek',
+      value: 'Clear Creek',
       image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
-      river: 'Clear Creek'
     },
     {
+      text: 'Blue River',
+      value: 'Blue River',
       image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
-      river: 'Blue River'
     }
   ],
   input: '',
