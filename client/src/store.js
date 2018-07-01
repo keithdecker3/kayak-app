@@ -8,35 +8,42 @@ const initialState = {
     {
       text: 'Poudre',
       value: 'Poudre',
-      image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
+      image: 'https://boofingtonheights.files.wordpress.com/2011/08/dsc_0589.jpg',
     },
     {
       text: 'Colorado',
       value: 'Colorado',
-      image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
+      image: 'https://www.colorado.com/sites/default/files/styles/1000x685/public/Glenwood-Canyon-Kayaker-Glenwood-Springs.jpg',
     },
     {
       text: 'Animas',
       value: 'Animas',
-      image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
+      image: 'https://www.americanwhitewater.org/photos/archive/medium/885497.jpg',
     },
     {
       text: 'Arkansas',
       value: 'Arkansas',
-      image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
+      image: 'http://mtntownmagazine.com/wp-content/uploads/2014/08/buena_vista_river_park-00001-3.jpg',
     },
     {
       text: 'Clear Creek',
       value: 'Clear Creek',
-      image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
+      image: 'http://www.goldenvisitorsbureau.com/gvcimages/gvckayaking.jpg',
     },
     {
       text: 'Blue River',
       value: 'Blue River',
-      image: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg',
+      image: 'https://www.summitdaily.com/wp-content/uploads/2016/08/KayakBlue-Sdn-090613-a-1-325x217.jpg',
     }
   ],
-  input: '',
+  river: '',
+  date: '',
+  difficulty: 0,
+  startTime: '',
+  endTime: '',
+  meetLat: '',
+  meetLong: '',
+  description: '',
   riverRuns: [],
   selectedRun: {},
   showRivers: true,
@@ -45,10 +52,11 @@ const initialState = {
 }
 
 export const actions = {
-  handleChange(input) {
+  handleChange(input, name) {
     return {
       type: HANDLE_CHANGE,
-      input
+      name: name,
+      input: input
     }
   },
   getRiverRuns(currentRiver) {
@@ -66,11 +74,12 @@ export const actions = {
 }
 
 export function reducer(state = initialState, action) {
+  const name = action.name
   switch(action.type) {
     case HANDLE_CHANGE: {
       return {
         ...state,
-        input: action.input
+       [name]: action.input
       }
     }
     case 'RIVER_RUNS_FULFILLED': {

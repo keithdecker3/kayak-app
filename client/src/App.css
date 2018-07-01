@@ -28,10 +28,29 @@
 }
 
 header {
-  height: 100px;
-  background-color: blue;
+  color: #494a4f;
+  height: 130px;
+  background-color: #db913d;
   display: flex;
   justify-items: center;
   justify-content: center;
+}
+
+header h1 {
+  font-size: 50px;
+  /* font-family: 'Fjalla One', sans-serif; */
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Concert One', cursive;
+  /* font-family: 'Paytone One', sans-serif; */
+  /* font-family: 'Titan One', cursive; */
+}
+
+body {
+  background-image: url('https://www.publicdomainpictures.net/pictures/50000/nahled/running-water-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  height: 100%;
 }
 

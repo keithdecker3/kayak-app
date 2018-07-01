@@ -7,21 +7,21 @@ import RiverRuns from '../components/RiverRuns'
 import RunDetails from '../components/RunDetails'
 import AppHeader from '../components/AppHeader'
 
-// var config = {
-//   apiKey: "AIzaSyDRmeOoIkVwFF2OveGuF6-OZb-qbkkoVwM",
-//   authDomain: "kayak-app.firebaseapp.com",
-//   databaseURL: "https://kayak-app.firebaseio.com",
-//   projectId: "kayak-app",
-//   storageBucket: "kayak-app.appspot.com",
-//   messagingSenderId: "989994694489" 
-// }
-
 class KayakApp extends Component {
 
   render() {
     return (
       <div>
-        <AppHeader />
+        <AppHeader 
+          onHandleChange={this.props.onHandleChange}
+          river={this.props.river}
+          date={this.props.date}
+          difficulty={this.props.difficulty}
+          startTime={this.props.startTime}
+          endTime={this.props.endTime}
+          meetLat={this.props.meetLat}
+          meetLong={this.props.meetLong}
+          description={this.props.description} />
         {this.props.showRivers ? 
         <RiverCategories 
           onGetRiverRuns={this.props.onGetRiverRuns}
@@ -45,6 +45,14 @@ class KayakApp extends Component {
 
 function mapStateToProps(state) {
   return {
+    river: state.river,
+    date: state.date,
+    difficulty: state.difficulty,
+    startTime: state.startTime,
+    endTime: state.endTime,
+    meetLat: state.meetLat,
+    meetLong: state.meetLong,
+    description: state.description,
     riverImages: state.riverImages,
     riverRuns: state.riverRuns,
     selectedRun: state.selectedRun,
@@ -56,8 +64,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onHandleChange(input) {
-      dispatch(actions.handleChange(input))
+    onHandleChange(input, name) {
+      dispatch(actions.handleChange(input, name))
     },
     onGetRiverRuns(currentRiver) {
       dispatch(actions.getRiverRuns(currentRiver))
