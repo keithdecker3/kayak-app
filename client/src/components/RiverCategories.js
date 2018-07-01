@@ -5,18 +5,20 @@ import { Card, Image, Button } from 'semantic-ui-react'
 class KayakApp extends Component {
   render() {
     return (
-      <div id='category-container'>
-        {this.props.riverImages.map((river, index) => {
-          return (
-            <Card className='river-card' key={index}>
-            <Image src={river.image} />
-            <Card.Content>
-              <Card.Header>{river.text}</Card.Header>
-            </Card.Content>
-            <Button name={river.text} onClick={(event) => this.props.onGetRiverRuns(event.target.name)}>View Trips</Button>
-          </Card>
-          )
-        })}
+      <div className='category-div'>
+        <section className='category-container'>
+          {this.props.riverImages.map((river, index) => {
+            return (
+              <Card className='river-card' key={index}>
+              <Image src={river.image} />
+              <Card.Content>
+                <Card.Header>{river.text}</Card.Header>
+              </Card.Content>
+              <Button name={river.text} onClick={(event) => this.props.onGetRiverRuns(event.target.name)}>View Trips</Button>
+            </Card>
+            )
+          })}
+        </section>
       </div>
     )
   }

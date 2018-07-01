@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'semantic-ui-react'
 
 import PostRun from './PostRun'
 
@@ -10,17 +11,22 @@ class AppHeader extends Component {
           <div className='title-container'>
             <h1>GoPaddle</h1>
           </div>
-        </header>
-        <PostRun 
-          onHandleChange={this.props.onHandleChange}
-          river={this.props.river}
-          date={this.props.date}
-          difficulty={this.props.difficulty}
-          startTime={this.props.startTime}
-          endTime={this.props.endTime}
-          meetLat={this.props.meetLat}
-          meetLong={this.props.meetLong}
-          description={this.props.description} />
+          <div className='post-div'>
+            <Button.Group>
+            <Button>Home</Button>
+            <PostRun 
+            onHandleChange={this.props.onHandleChange}
+            river={this.props.river}
+            date={this.props.date}
+            difficulty={this.props.difficulty}
+            startTime={this.props.startTime}
+            endTime={this.props.endTime}
+            meetLat={this.props.meetLat}
+            meetLong={this.props.meetLong}
+            description={this.props.description} />
+            </Button.Group>
+          </div>
+        </header>        
       </div>
     )
   }

@@ -6,40 +6,39 @@ const riverOptions = [
   {
     text: 'Poudre',
     value: 'Poudre',
-    image: {avatar: true, src: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg'},
+    image: {avatar: true, src: 'https://boofingtonheights.files.wordpress.com/2011/08/dsc_0589.jpg'},
   },
   {
     text: 'Colorado',
     value: 'Colorado',
-    image: {avatar: true, src: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg'},
+    image: {avatar: true, src: 'https://www.colorado.com/sites/default/files/styles/1000x685/public/Glenwood-Canyon-Kayaker-Glenwood-Springs.jpg'},
   },
   {
     text: 'Animas',
     value: 'Animas',
-    image: {avatar: true, src: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg'},
+    image: {avatar: true, src: 'https://www.americanwhitewater.org/photos/archive/medium/885497.jpg'},
   },
   {
     text: 'Arkansas',
     value: 'Arkansas',
-    image: {avatar: true, src: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg'},
+    image: {avatar: true, src: 'http://mtntownmagazine.com/wp-content/uploads/2014/08/buena_vista_river_park-00001-3.jpg'},
   },
   {
     text: 'Clear Creek',
     value: 'Clear Creek',
-    image: {avatar: true, src: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg'},
+    image: {avatar: true, src: 'http://www.goldenvisitorsbureau.com/gvcimages/gvckayaking.jpg'},
   },
   {
     text: 'Blue River',
     value: 'Blue River',
-    image: {avatar: true, src: 'https://wilderness-voyageurs.com/wp-content/uploads/mid-summer10-2381.jpg'},
+    image: {avatar: true, src: 'https://www.summitdaily.com/wp-content/uploads/2016/08/KayakBlue-Sdn-090613-a-1-325x217.jpg'},
   }
 ]
 
 class PostRun extends Component {
   render() {
     return (
-      <div>
-        <Modal size='small' trigger={<Button>Show Modal</Button>}>
+        <Modal size='small' trigger={<Button>Post a Trip</Button>}>
           <Modal.Header>Add a Trip</Modal.Header>
           <Modal.Content>
             <Form>
@@ -64,7 +63,6 @@ class PostRun extends Component {
             </Form>
           </Modal.Content>
         </Modal>        
-      </div>
     )
   }
 }
