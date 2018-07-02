@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
 
 import PostRun from './PostRun'
+import UserLogIn from './UserLogIn'
 
 class AppHeader extends Component {
   render() {
@@ -24,6 +25,7 @@ class AppHeader extends Component {
             meetLat={this.props.meetLat}
             meetLong={this.props.meetLong}
             description={this.props.description} />
+            <UserLogIn />
             </Button.Group>
           </div>
         </header>  
