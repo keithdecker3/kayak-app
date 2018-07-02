@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
 
-import { Card, Image, Button } from 'semantic-ui-react'
+import { Modal, Icon, Button } from 'semantic-ui-react'
 
-class RunDetails extends Component {
+class UserModal extends Component {
   render() {
-    const position = [Number(this.props.selectedRun.meet_lat), Number(this.props.selectedRun.meet_lng)]
     return (
-      <Modal trigger={
+      <Modal size='tiny' trigger={
         <a>
           <Icon name='user' />
           22 Attending  -  View or RSVP
         </a>
       }>
-        <Modal.Header>Users Attending</Modal.Header>
+        <Modal.Header>People Attending</Modal.Header>
         <Modal.Content>
           <p>Keith Decker - Skill: Intermediate | Safety Training: Intermediate </p>
         </Modal.Content>
@@ -21,5 +20,5 @@ class RunDetails extends Component {
   }
 }
 
-export default RunDetails
+export default UserModal
 

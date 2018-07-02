@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import { Card, Icon, Button } from 'semantic-ui-react'
 
+import UserModal from './UserModal'
+
 class RiverRuns extends Component {
+
+//   <a>
+//   <Icon name='user' />
+//   {run.id -3} Attending -  View or RSVP
+// </a>
 
   render() {
     return (
@@ -21,10 +28,7 @@ class RiverRuns extends Component {
                 <Card.Description className='run-description'>{run.description}</Card.Description>
               </Card.Content>
               <Card.Content extra>
-                <a>
-                  <Icon name='user' />
-                  22 Attending  -  View or RSVP
-                </a>
+                <UserModal />
               </Card.Content>
               <Button className='card-button' name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</Button>
             </Card>
