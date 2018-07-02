@@ -12,8 +12,8 @@ class AppHeader extends Component {
             <h1>GoPaddle</h1>
           </div>
           <div className='post-div'>
-            <Button.Group>
-            <Button>Home</Button>
+            <Button.Group >
+            <Button className='nav-button' onClick={this.props.onGoHome}>Home</Button>
             <PostRun 
             onHandleChange={this.props.onHandleChange}
             river={this.props.river}
@@ -26,7 +26,8 @@ class AppHeader extends Component {
             description={this.props.description} />
             </Button.Group>
           </div>
-        </header>        
+        </header>  
+        <div className='header-buffer' />     
       </div>
     )
   }

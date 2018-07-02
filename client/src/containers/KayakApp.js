@@ -13,6 +13,7 @@ class KayakApp extends Component {
     return (
       <div>
         <AppHeader 
+          onGoHome={this.props.onGoHome}
           onHandleChange={this.props.onHandleChange}
           river={this.props.river}
           date={this.props.date}
@@ -38,6 +39,10 @@ class KayakApp extends Component {
           selectedRun={this.props.selectedRun} 
           onSelectRun={this.props.onSelectRun} />
           : '' }
+        <footer>
+          <p className="copyright"> &copy;GoPaddle 2018</p>
+          <p>Created by Keith Decker</p>
+        </footer> 
       </div>
     )
   }
@@ -72,6 +77,9 @@ function mapDispatchToProps(dispatch) {
     },
     onSelectRun(selectedRun) {
       dispatch(actions.selectRun(selectedRun))
+    },
+    onGoHome() {
+      dispatch(actions.goHome())
     }
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Header, Image, Modal, Form, Dropdown, Rating, TextArea } from 'semantic-ui-react'
 import { actions } from '../store'
 
+
 const riverOptions = [
   {
     text: 'Poudre',
@@ -36,9 +37,33 @@ const riverOptions = [
 ]
 
 class PostRun extends Component {
+
+  formSubmit = (event) => {
+    event.preventDefault()
+    const postData = {
+      river: this.props.river,
+      date: this.props.date,
+      start_time: this.props.startTime,
+      end_time: this.props.endTime,
+      description: this.props.description,
+      meet_lat: this.props.meetLat,
+      meet_long: this.props.meetLong,
+      difficulty: this.props.difficulty
+    }
+      console.log(postData)
+      fetch('https://kayak-app.herokuapp.com/runs', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(postData),
+      })
+      .then(response => response.json())
+  }
+
   render() {
     return (
-        <Modal size='small' trigger={<Button>Post a Trip</Button>}>
+        <Modal size='small' trigger={<Button className='nav-button'>Post a Trip</Button>}>
           <Modal.Header>Add a Trip</Modal.Header>
           <Modal.Content>
             <Form>
@@ -59,7 +84,7 @@ class PostRun extends Component {
                 <Form.Input  label='Meetup Longitude' name='meetLong' type='number' onChange={(event) => this.props.onHandleChange(event.target.value, event.target.name)} />
               </Form.Group>
               <TextArea placeholder='Describe the trip'name='description' onChange={(event) => this.props.onHandleChange(event.target.value, event.target.name)} />
-              <Button type='submit'>Submit</Button>
+              <Button type='submit' onClick={this.formSubmit}>Submit</Button>
             </Form>
           </Modal.Content>
         </Modal>        

@@ -9,12 +9,12 @@ class KayakApp extends Component {
         <section className='category-container'>
           {this.props.riverImages.map((river, index) => {
             return (
-              <Card className='river-card' key={index}>
+            <Card className='river-card' key={index}>
               <Image src={river.image} />
               <Card.Content>
-                <Card.Header>{river.text}</Card.Header>
+                <Card.Header textAlign='center' className='arvo-font' >{river.text}</Card.Header>
               </Card.Content>
-              <Button name={river.text} onClick={(event) => this.props.onGetRiverRuns(event.target.name)}>View Trips</Button>
+              <Button className='card-button' name={river.text} onClick={(event) => this.props.onGetRiverRuns(event.target.name)}>View Trips</Button>
             </Card>
             )
           })}

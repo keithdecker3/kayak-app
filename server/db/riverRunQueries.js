@@ -7,8 +7,8 @@ module.exports = {
   getOne(river) {
     return knex('river_run').where('river', river)
   },
-  create(river_run) {
-    return knex('river_run').insert(river_run, '*')
+  create(river) {
+    return knex('river_run').insert(river, '*')
   },
   update(id, river_run) {
     return knex('river_run').where('id', id).update(river_run, '*')

@@ -8,5 +8,5 @@ export default {
       .then(result => {
         return result
       })
-  }
+  },
 }

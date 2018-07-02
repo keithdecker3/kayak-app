@@ -1,3 +1,11 @@
+body {
+  background-image: url('https://www.publicdomainpictures.net/pictures/50000/nahled/running-water-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  height: 100%;
+}
 
 .category-div {
   display: flex;
@@ -12,20 +20,30 @@
   align-items: center;
   width: 80vw;
   margin: 0vw; 
+  color: #494a4f !important;
+
 }
-
-
 
 .river-card {
   margin-top: 30px; 
   margin-bottom: 10px; 
   margin-left: 1.5px; 
   margin-right: 1.5px;
+  font-family: 'Arvo', serif; 
 }
 
 .leaflet-container {
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;
 }
 
 header {
@@ -35,6 +53,11 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.header-buffer {
+  height: 20px;
+  background-color: white;
 }
 
 .title-container {
@@ -47,7 +70,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-content: flex-end
+  align-content: flex-end;
 }
 
 header h1 {
@@ -55,12 +78,58 @@ header h1 {
   font-family: 'Concert One', cursive;
 }
 
-body {
-  background-image: url('https://www.publicdomainpictures.net/pictures/50000/nahled/running-water-background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  height: 100%;
+.arvo-font {
+  font-family: 'Arvo', serif !important;
+}
+
+.card-button {
+  font-family: 'Arvo', serif !important;
+  background-color: #db913d !important;
+  font-size: 18px !important;
+  color: #494a4f !important;
+}
+
+.nav-button {
+  font-family: 'Arvo', serif !important;
+  background-color: #db913d !important;
+  font-size: 20px !important;
+
+}
+
+.run-date {
+  font-size: 30px !important;
+  font-family: 'Arvo', serif !important;
+
+}
+
+.run-info {
+  font-size: 20px !important;
+  margin-top: 5px;
+  font-family: 'Arvo', serif !important;
+
+}
+
+.run-description {
+  font-size: 18px;
+  font-family: 'Arvo', serif !important;
+}
+
+.map-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Arvo', serif !important;
+  height: 30px;
+  background-color: white;
+  color: #494a4f !important;
+
 }
 

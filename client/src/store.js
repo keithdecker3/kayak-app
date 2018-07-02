@@ -2,6 +2,7 @@ import API from './API'
 
 const HANDLE_CHANGE = 'HANDLE_CHANGE'
 const SELECT_RUN = 'SELECT_RUN'
+const GO_HOME = 'GO_HOME'
 
 const initialState = {
   riverImages: [
@@ -70,6 +71,11 @@ export const actions = {
       type: 'SELECT_RUN',
       selectedRun
     }
+  },
+  goHome() {
+    return {
+    type: 'GO_HOME',
+    }
   }
 }
 
@@ -98,6 +104,14 @@ export function reducer(state = initialState, action) {
         showRivers: false,
         showRuns:false,
         showRunDetails: true
+      }
+    }
+    case 'GO_HOME': {
+      return {
+        ...state,
+        showRivers: true,
+        showRuns: false,
+        showRunDetails: false
       }
     }
     default:
