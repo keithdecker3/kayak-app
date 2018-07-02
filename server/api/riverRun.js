@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:river',  (req, res) => {
+  console.log('zero')
   queries.getOne(req.params.river).then(river => {
     if(river) {
       res.json(river)
@@ -21,6 +22,7 @@ router.get('/:river',  (req, res) => {
 })
 
 router.post('/', (req, res, next) => {
+  console.log('one')
   queries.create(req.body).then(runs => {
     res.json(runs[0])
   })

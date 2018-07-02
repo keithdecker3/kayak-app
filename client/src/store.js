@@ -39,7 +39,7 @@ const initialState = {
   ],
   river: '',
   date: '',
-  difficulty: 0,
+  difficulty: '0',
   startTime: '',
   endTime: '',
   meetLat: '',

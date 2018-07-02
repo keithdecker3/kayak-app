@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
     table.string('description'),
     table.string('meet_lat'),
     table.string('meet_lng'),
-    table.integer('difficulty')
+    table.string('difficulty')
   })
 };
 

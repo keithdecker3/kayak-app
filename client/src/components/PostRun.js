@@ -47,11 +47,11 @@ class PostRun extends Component {
       end_time: this.props.endTime,
       description: this.props.description,
       meet_lat: this.props.meetLat,
-      meet_long: this.props.meetLong,
+      meet_lng: this.props.meetLong,
       difficulty: this.props.difficulty
     }
       console.log(postData)
-      fetch('https://kayak-app.herokuapp.com/runs', {
+      fetch('http://localhost:3000/runs', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

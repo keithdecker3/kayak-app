@@ -1,4 +1,4 @@
-const API_URL = 'https://kayak-app.herokuapp.com'
+const API_URL = 'http://localhost:3000'
 
 export default {
   search(currentRiver) {

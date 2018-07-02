@@ -23,7 +23,7 @@ class RiverRuns extends Component {
               <Card.Content extra>
                 <a>
                   <Icon name='user' />
-                  22 Attending
+                  22 Attending  -  View Profiles
                 </a>
               </Card.Content>
               <Button className='card-button' name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</Button>

@@ -8,6 +8,7 @@ module.exports = {
     return knex('river_run').where('river', river)
   },
   create(river) {
+    console.log('two')
     return knex('river_run').insert(river, '*')
   },
   update(id, river_run) {

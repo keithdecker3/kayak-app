@@ -9,7 +9,7 @@ class RunDetails extends Component {
     return (
       <div className='map-div'>
         <div center className='map-container'>
-            <Map center={position} zoom={19}>
+            <Map center={position} zoom={15}>
               <TileLayer
                 attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
