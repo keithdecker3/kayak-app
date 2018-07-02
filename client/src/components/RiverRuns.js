@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Card, Icon, Button } from 'semantic-ui-react'
+import { Card, Icon, Button, Modal } from 'semantic-ui-react'
 
 import UserModal from './UserModal'
+import RunDetails from './RunDetails'
 
 class RiverRuns extends Component {
 
@@ -29,6 +30,10 @@ class RiverRuns extends Component {
               </Card.Content>
               <Card.Content extra>
                 <UserModal />
+                <Modal size='small'trigger={<Button className='card-button' name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</Button>}>
+                  <RunDetails 
+                  selectedRun={this.props.selectedRun} />
+                </Modal>
               </Card.Content>
               <Button className='card-button' name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</Button>
             </Card>

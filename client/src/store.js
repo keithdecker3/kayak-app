@@ -101,9 +101,6 @@ export function reducer(state = initialState, action) {
       return {
         ...state,
         selectedRun: action.selectedRun,
-        showRivers: false,
-        showRuns:false,
-        showRunDetails: true
       }
     }
     case 'GO_HOME': {
