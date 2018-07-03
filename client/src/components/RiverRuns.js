@@ -18,7 +18,7 @@ class RiverRuns extends Component {
         <section className='category-container'>
           {this.props.riverRuns.map((run, index) => {
             return (
-              <Card key={run.id}>
+              <Card key={run.id} style={{marginTop:'30px', marginBottom:'10px', marginLeft:'1.5px', marginRight:'1.5px'}}>
               <Card.Content>
                 <Card.Header textAlign='center' className='run-date'>{run.date}</Card.Header>
                 <Card.Meta className='run-info'>

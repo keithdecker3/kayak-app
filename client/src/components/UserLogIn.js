@@ -18,8 +18,10 @@ class UserLogIn extends Component {
               <input placeholder='Enter Password' />
             </Form.Field>
           </Form>
-          <Button>Submit</Button>
-          <a>Don't have an account? Create one now</a>
+          <Button id='login-button'>Submit</Button>
+          <div className='create-account-div'>
+            <a className='create-account'>Don't have an account? Create one now</a>
+          </div>
         </Modal.Content>
       </Modal>
     )

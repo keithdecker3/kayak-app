@@ -84,7 +84,7 @@ class PostRun extends Component {
                 <Form.Input  label='Meetup Longitude' name='meetLong' type='number' onChange={(event) => this.props.onHandleChange(event.target.value, event.target.name)} />
               </Form.Group>
               <TextArea placeholder='Describe the trip'name='description' onChange={(event) => this.props.onHandleChange(event.target.value, event.target.name)} />
-              <Button type='submit' onClick={this.formSubmit}>Submit</Button>
+              <Button id='post-run-button' type='submit' onClick={this.formSubmit}>Submit</Button>
             </Form>
           </Modal.Content>
         </Modal>        

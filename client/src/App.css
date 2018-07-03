@@ -21,7 +21,8 @@ body {
   align-items: center;
   width: 80vw;
   color: #494a4f !important;
-
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .river-card {
@@ -64,6 +65,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 50px;
 }
 
 .post-div {
@@ -127,9 +129,16 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Arvo', serif !important;
-  height: 30px;
+  font-size: 16px;
+  height: 50px;
   background-color: white;
   color: #494a4f !important;
+}
+
+footer p {
+  margin-top: 20px !important;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .checkbox-div {
@@ -170,5 +179,36 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.rsvp-label {
+  margin-top:10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: 'Arvo', serif;
+}
+
+#login-button {
+  margin-top:10px;
+  font-family: 'Arvo', serif;
+}
+
+.create-account-div {
+  margin-top: 10px;
+  font-family: 'Arvo', serif;
+}
+
+label {
+  font-family: 'Arvo', serif;
+}
+
+#post-run-button {
+  margin-top: 10px;
+  font-family: 'Arvo', serif;
+}
+
+.ui.dropdown {
+  height: 20px;
+  margin-top: 22px;
 }
 

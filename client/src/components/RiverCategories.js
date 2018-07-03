@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Card, Image, Button } from 'semantic-ui-react'
+import { Card, Image, Button, } from 'semantic-ui-react'
 
 class KayakApp extends Component {
   render() {
@@ -9,7 +9,7 @@ class KayakApp extends Component {
         <section className='category-container'>
           {this.props.riverImages.map((river, index) => {
             return (
-            <Card className='river-card' key={index}>
+            <Card className='river-card' key={index} style={{marginTop:'30px', marginBottom:'10px', marginLeft:'1.5px', marginRight:'1.5px'}}>
               <Image src={river.image} />
               <Card.Content>
                 <Card.Header textAlign='center' className='arvo-font' >{river.text}</Card.Header>

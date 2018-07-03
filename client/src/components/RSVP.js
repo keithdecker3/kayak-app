@@ -9,8 +9,8 @@ class RSVP extends Component {
         <Modal.Header>Are You Attending?</Modal.Header>
         <Modal.Content>
           <div className='checkbox-div'>
-            <label className='rsvp-label'>No   Yes</label>
-            <Checkbox toggle />
+            <label className='rsvp-label'>No    Yes</label>
+            <Checkbox toggle color='black' />
           </div>
         </Modal.Content>
       </div>
