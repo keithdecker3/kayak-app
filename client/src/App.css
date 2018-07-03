@@ -130,6 +130,45 @@ footer {
   height: 30px;
   background-color: white;
   color: #494a4f !important;
+}
 
+.checkbox-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-div {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  font-size: 18px;
+  font-family: 'Arvo', serif
+}
+
+.details-div a {
+  margin-top: 5px;
+}
+
+.run-date {
+  margin-bottom: 10px !important;
+}
+
+
+.attending-paragraph {
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+}
+
+.header {
+  font-size: 22px !important;
+  font-family: 'Arvo', serif !important;
+}
+
+.rsvp-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 

@@ -3,6 +3,7 @@ import { Card, Icon, Button, Modal } from 'semantic-ui-react'
 
 import UserModal from './UserModal'
 import RunDetails from './RunDetails'
+import RSVP from './RSVP'
 
 class RiverRuns extends Component {
 
@@ -24,18 +25,23 @@ class RiverRuns extends Component {
                   <span className='date'>{run.start_time} to {run.end_time}</span>
                 </Card.Meta>
                 <Card.Meta className='run-info'>
-                  <span className='date'>Difficulty: {run.difficulty}/5</span>
+                  <span className='difficulty'>Difficulty: {run.difficulty}/5</span>
                 </Card.Meta>
-                <Card.Description className='run-description'>{run.description}</Card.Description>
+                <Card.Description style={{height: "60px", overflow:"auto"}} className='run-description'>{run.description}</Card.Description>
               </Card.Content>
               <Card.Content extra>
-                <UserModal />
-                <Modal size='small'trigger={<Button className='card-button' name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</Button>}>
-                  <RunDetails 
-                  selectedRun={this.props.selectedRun} />
-                </Modal>
+                <div className='details-div'>
+                  <UserModal 
+                    attending={run.id}/>
+                  <Modal size='small'trigger={<a name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</a>}>
+                    <RunDetails 
+                    selectedRun={this.props.selectedRun} />
+                  </Modal>
+                </div>
               </Card.Content>
-              <Button className='card-button' name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</Button>
+              <Modal size='mini' trigger={<Button className='card-button'>RSVP</Button>}>
+                <RSVP />
+              </Modal>
             </Card>
             )
           })}
