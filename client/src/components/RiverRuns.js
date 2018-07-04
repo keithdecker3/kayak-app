@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, Icon, Button, Modal } from 'semantic-ui-react'
+import { Card, Icon, Button, Modal, } from 'semantic-ui-react'
 
 import UserModal from './UserModal'
 import RunDetails from './RunDetails'
@@ -13,6 +13,7 @@ class RiverRuns extends Component {
 // </a>
 
   render() {
+    const numberArray=[4,3,2,5,0,0,0]
     return (
       <div className='category-div'>
         <section className='category-container'>
@@ -32,8 +33,8 @@ class RiverRuns extends Component {
               <Card.Content extra>
                 <div className='details-div'>
                   <UserModal 
-                    attending={run.id}/>
-                  <Modal size='small'trigger={<a name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}>Meetup Location</a>}>
+                    attending={numberArray[index]}/>
+                  <Modal size='small'trigger={<a name={index} onClick={(event) => this.props.onSelectRun(this.props.riverRuns[event.target.name])}><Icon name='map'/> Meetup Location</a>}>
                     <RunDetails 
                     selectedRun={this.props.selectedRun} />
                   </Modal>

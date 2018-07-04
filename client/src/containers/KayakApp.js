@@ -13,6 +13,8 @@ class KayakApp extends Component {
     return (
       <div>
         <AppHeader 
+          loggedIn={this.props.loggedIn}
+          onLoggedIn={this.props.onLoggedIn}
           onGoHome={this.props.onGoHome}
           onHandleChange={this.props.onHandleChange}
           river={this.props.river}
@@ -63,7 +65,8 @@ function mapStateToProps(state) {
     selectedRun: state.selectedRun,
     showRivers: state.showRivers,
     showRuns: state.showRuns,
-    showRunDetails: state.showRunDetails
+    showRunDetails: state.showRunDetails,
+    loggedIn: state.loggedIn
   }
 }
 
@@ -80,6 +83,9 @@ function mapDispatchToProps(dispatch) {
     },
     onGoHome() {
       dispatch(actions.goHome())
+    },
+    onLoggedIn() {
+      dispatch(actions.loggedIn())
     }
   }
 }

@@ -3,6 +3,7 @@ import API from './API'
 const HANDLE_CHANGE = 'HANDLE_CHANGE'
 const SELECT_RUN = 'SELECT_RUN'
 const GO_HOME = 'GO_HOME'
+const LOGGED_IN = 'LOGGED_IN'
 
 const initialState = {
   riverImages: [
@@ -49,7 +50,8 @@ const initialState = {
   selectedRun: {},
   showRivers: true,
   showRuns: false,
-  showRunDetails: false
+  showRunDetails: false,
+  loggedIn: false,
 }
 
 export const actions = {
@@ -75,6 +77,11 @@ export const actions = {
   goHome() {
     return {
     type: 'GO_HOME',
+    }
+  },
+  loggedIn() {
+    return {
+      type: 'LOGGED_IN'
     }
   }
 }
@@ -109,6 +116,12 @@ export function reducer(state = initialState, action) {
         showRivers: true,
         showRuns: false,
         showRunDetails: false
+      }
+    }
+    case 'LOGGED_IN': {
+      return {
+        ...state,
+        loggedIn: true,
       }
     }
     default:

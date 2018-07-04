@@ -18,9 +18,9 @@ class UserLogIn extends Component {
               <input placeholder='Enter Password' />
             </Form.Field>
           </Form>
-          <Button id='login-button'>Submit</Button>
+          <Button onClick={this.props.onLoggedIn} id='login-button'>Submit</Button>
           <div className='create-account-div'>
-            <a className='create-account'>Don't have an account? Create one now</a>
+            <a>Don't have an account? Create one now</a>
           </div>
         </Modal.Content>
       </Modal>

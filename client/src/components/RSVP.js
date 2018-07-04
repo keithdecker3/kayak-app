@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Modal, Checkbox } from 'semantic-ui-react'
+import { Modal, Checkbox, Button } from 'semantic-ui-react'
 
 class RSVP extends Component {
   render() {
@@ -9,8 +9,11 @@ class RSVP extends Component {
         <Modal.Header>Are You Attending?</Modal.Header>
         <Modal.Content>
           <div className='checkbox-div'>
-            <label className='rsvp-label'>No    Yes</label>
+            <label className='rsvp-label'>No -- Yes</label>
             <Checkbox toggle color='black' />
+            <div className='rsvp-button-div'>
+              <Button id='rsvp-button'>Submit</Button>
+            </div>
           </div>
         </Modal.Content>
       </div>

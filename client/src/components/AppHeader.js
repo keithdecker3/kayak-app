@@ -11,6 +11,7 @@ class AppHeader extends Component {
         <header>
           <div className='title-container'>
             <h1>GoPaddle</h1>
+            <img id='logo' src='http://clipartmag.com/images/oar-clipart-12.png' alt='kayak icon' />
           </div>
           <div className='post-div'>
             <Button.Group >
@@ -25,7 +26,11 @@ class AppHeader extends Component {
             meetLat={this.props.meetLat}
             meetLong={this.props.meetLong}
             description={this.props.description} />
-            <UserLogIn />
+            {this.props.loggedIn ? <Button className='nav-button'>Justin</Button> 
+            : <UserLogIn 
+              loggedIn={this.props.loggedIn}
+              onLoggedIn={this.props.onLoggedIn} />
+             }
             </Button.Group>
           </div>
         </header>  

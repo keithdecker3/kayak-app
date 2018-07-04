@@ -23,6 +23,7 @@ body {
   color: #494a4f !important;
   margin-bottom: 30px;
   margin-top: 10px;
+  margin-left: 80px;
 }
 
 .river-card {
@@ -184,6 +185,7 @@ footer p {
 .rsvp-label {
   margin-top:10px;
   margin-bottom: 10px;
+  margin-left: 35px;
   font-size: 18px;
   font-family: 'Arvo', serif;
 }
@@ -210,5 +212,26 @@ label {
 .ui.dropdown {
   height: 20px;
   margin-top: 22px;
+}
+
+#rsvp-button {
+  margin-top:10px;
+  font-family: 'Arvo', serif;
+  margin-left: 25px;
+}
+
+.rsvp-button-div{
+  margin-right: 30px;
+}
+
+.ui.checkbox {
+  margin-left: 45px;
+}
+
+#logo {
+  height: auto;
+  width: 100px;
+  margin-bottom: 20px;
+  margin-left: 30px;
 }
 
