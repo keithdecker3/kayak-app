@@ -22,14 +22,14 @@ https://github.com/keithdecker3/kayak-app
 https://kayak-app.herokuapp.com/
 
 ### **Built With**
-React
-Node.js
-Express.js
-Knex
-Postgresql
-Cypress
-React Leaflet
-Semantic UI React
+- React
+- Node.js
+- Express.js
+- Knex
+- Postgresql
+- Cypress
+- React Leaflet
+- Semantic UI React
 
 ### **Author**
 Keith Decker
