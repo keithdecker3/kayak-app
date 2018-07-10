@@ -4,12 +4,12 @@ PaddleUp is an app designed to easily connect kayakers who are planning trips to
 ## **Getting Started**
 
 As a user:
--Log in or create an account
--Select a river to view posted trips
--Click on users to view details
--Click on view map to see the meetup location
--Click RSVP to let other users know you are going
--If you want to post a trip, click post trip in the top right corner, fill out the form, and hit submit
+- Log in or create an account
+- Select a river to view posted trips
+- Click on users to view details
+- Click on view map to see the meetup location
+- Click RSVP to let other users know you are going
+- If you want to post a trip, click post trip in the top right corner, fill out the form, and hit submit
 
 
 ### **Deployed Site**
